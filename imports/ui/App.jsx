@@ -8,8 +8,6 @@ import NavbarX from './pages/NavbarX.jsx';
 const App = () => (
   <div>
     <NavbarX/>
-    {/* <h1>Welcome to Meteor!</h1> */}
-    {/* <Info /> */}
     <Login />
   </div>
 );
