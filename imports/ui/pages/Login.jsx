@@ -36,29 +36,35 @@ handleSubmit(e) {
 
 render() {
     return (
-    <div className="FormCenter">
-        <form onSubmit={this.handleSubmit} className="FormFields">
-          <div className="FormField">
-            <label className="FormField__Label" htmlFor="name">Full Name</label>
-            <input type="text" id="name" className="FormField__Input" placeholder="Enter your full name" name="name" value={this.state.name} onChange={this.handleChange} />
+    <div className="FormCenter" style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}} >
+
+        <form onSubmit={this.handleSubmit} className="FormFields" >
+          <div><h1>Registrarse</h1></div>
+     
+          <div className="FormField" >
+            {/* <label className="FormField__Label" htmlFor="email">E-Mail Address</label> */}
+            <input type="email" id="email" className="FormField__Input" placeholder="Correo Electrónico" name="email" value={this.state.email} onChange={this.handleChange} />
           </div>
           <div className="FormField">
-            <label className="FormField__Label" htmlFor="password">Password</label>
-            <input type="password" id="password" className="FormField__Input" placeholder="Enter your password" name="password" value={this.state.password} onChange={this.handleChange} />
+            {/* <label className="FormField__Label" htmlFor="name">Full Name</label> */}
+            <input type="text" id="name" className="FormField__Input" placeholder="Nombre de Usuario" name="name" value={this.state.name} onChange={this.handleChange} />
           </div>
           <div className="FormField">
-            <label className="FormField__Label" htmlFor="email">E-Mail Address</label>
-            <input type="email" id="email" className="FormField__Input" placeholder="Enter your email" name="email" value={this.state.email} onChange={this.handleChange} />
+            {/* <label className="FormField__Label" htmlFor="password">Password</label> */}
+            <input type="password" id="password" className="FormField__Input" placeholder="Contraseña" name="password" value={this.state.password} onChange={this.handleChange} />
+          </div>
+          <div className="FormField">
+            {/* <label className="FormField__Label" htmlFor="passwordConfirmed">Password</label> */}
+            <input type="password" id="passwordConfirmed" className="FormField__Input" placeholder="Confirmar Contraseña" name="password" value={this.state.password} onChange={this.handleChange} />
           </div>
 
-          <div className="FormField">
+          {/* <div className="FormField">
             <label className="FormField__CheckboxLabel">
                 <input className="FormField__Checkbox" type="checkbox" name="hasAgreed" value={this.state.hasAgreed} onChange={this.handleChange} /> I agree all statements in <a href="" className="FormField__TermsLink">terms of service</a>
             </label>
-          </div>
-
+          </div> */}
           <div className="FormField">
-              <button className="FormField__Button mr-20">Sign Up</button> 
+              <button className="FormField__Button mr-20">Registrarse</button> 
           </div>
         </form>
       </div>
