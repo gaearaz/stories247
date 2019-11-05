@@ -38,7 +38,11 @@ export default class NavbarX extends React.Component {
           
 
         </Nav>
-        <FormControl type="text" placeholder="Search" className="form-nav"/>    
+        <FormControl type="text" placeholder="Search" className="form-nav"/>
+        <Button variant="outline-warning">
+          Search
+        </Button>
+
         <Nav className="ml-auto">
         <Button className="btn-nav" variant="warning">
           
