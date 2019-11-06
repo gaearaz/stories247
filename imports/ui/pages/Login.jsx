@@ -1,11 +1,13 @@
 import React from 'react';
 import '../css/login.css';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
+import ReactDOM from 'react-dom'
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 
 export default class Login extends React.Component {
   constructor() {
@@ -20,7 +22,18 @@ export default class Login extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    
+    // const routing = (
+    //   <Router>
+    //     <div>
+    //       <Route path="/" component={App} />
+    //       <Route path="/user" component={User} />
+    //     </div>
+    //   </Router>
+    // )
 }
+
+
 
 handleChange(e) {
     let target = e.target;
@@ -38,6 +51,8 @@ handleSubmit(e) {
     console.log('The form was submitted with the following data:');
     console.log(this.state);
 }
+
+
 
 render() {
     return (
@@ -78,10 +93,10 @@ render() {
           <div><h1 style={{ paddingBottom: '20%'}}>Iniciar Sesión</h1></div>
 
           <div className="FormField">
-            <input type="text" id="name" className="FormField__Input" placeholder="Nombre de Usuario" name="name" value={this.state.name} onChange={this.handleChange} />
+            <input type="text" id="name" className="FormField__Input" placeholder="Nombre de Usuario" name="name2" value={this.state.name} onChange={this.handleChange} />
           </div>
           <div className="FormField">
-            <input type="password" id="password" className="FormField__Input" placeholder="Contraseña" name="password" value={this.state.password} onChange={this.handleChange} />
+            <input type="password" id="password" className="FormField__Input" placeholder="Contraseña" name="password2" value={this.state.password} onChange={this.handleChange} />
           </div>
           <div className="FormField">
               <Button variant="dark" style={{borderRadius: '25%'}}>Iniciar Sesión</Button>
