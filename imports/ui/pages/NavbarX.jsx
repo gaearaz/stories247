@@ -7,11 +7,40 @@ import FormControl from 'react-bootstrap/FormControl'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import '../css/navbar.css'
 import NavItem from 'react-bootstrap/NavItem';
+import Image from 'react-bootstrap/Image';
 
 export default class NavbarX extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.handleLoginClick = this.handleLoginClick.bind(this);
+    this.handleLogoutClick = this.handleLogoutClick.bind(this);
+    this.state = {isLoggedIn: false};
+  }
+  handleLoginClick() {
+    this.setState({isLoggedIn: true});
+  }
+  handleLogoutClick() {
+    this.setState({isLoggedIn: false});
+  }
+
   render() {
+    const isLoggedIn = this.state.isLoggedIn;
+    let button;
+    if (isLoggedIn) {
+      button = <Button className="btn-nav" variant="warning" onClick={this.handleLogoutClick}>
+                  <Image src="/user.png"/>
+                  <b> Acceder</b>
+                </Button>
+    } else {
+      button = <Button className="btn-nav" variant="warning" onClick={this.handleLoginClick}>
+                  <Image src="/user.png"/>
+                  <b>  Salir </b>
+                </Button>
+    }
+
     return (
-      <Navbar className="nav-x" bg="dark" variant="dark">
+      <Navbar fixed="top" className="nav-x" bg="dark" variant="dark">
         <Navbar.Brand href="#home">
           <Button className="btn-nav" variant="warning">
             24/7
@@ -24,7 +53,7 @@ export default class NavbarX extends React.Component {
             </Button>
           </Nav.Link>
           <NavDropdown className="dropdown-nav" title="Categorias " >
-            <pre> <b>  Aventurarme con...</b></pre>
+            <pre> <b>  Aventurarme con...    </b></pre>
             <NavDropdown.Header />
             <NavDropdown.Item href="#cat-action">Acción</NavDropdown.Item>
             <NavDropdown.Item href="#cat-fantasy">Fanatasía</NavDropdown.Item>
@@ -35,23 +64,24 @@ export default class NavbarX extends React.Component {
             <NavDropdown.Item href="#cat-poesy">Poesía</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.3">Otros</NavDropdown.Item>
           </NavDropdown>
-          
+
 
         </Nav>
-        <FormControl type="text" placeholder="Search" className="form-nav"/>
-        <Button variant="outline-warning">
-          Search
+        <Form className="form-nav">
+          <FormControl type="text" placeholder="Buscar libros..."  />
+          <Button className="btn-search" variant="outline-warning">
+            Buscar
         </Button>
-
+        </Form>
         <Nav className="ml-auto">
-        <Button className="btn-nav" variant="warning">
+        {button}
+
           
-            <b>Acceder</b>
-          </Button>
-          
+
         </Nav>
         
 
+        
       </Navbar>
     );
   }

@@ -10,14 +10,14 @@ import App from '/imports/ui/App'
 
 Bert.defaults.style = 'growl-top-right';
 
-// const routing = (
-//   <Router>
-//     <div>
-//       <Route path="/" component={App} />
-//       <Route path="/user" component={User} />
-//     </div>
-//   </Router>
-// )
+  const routing = (
+    <Router>
+      <div>
+        <Route path="/" component={App} />
+        <Route path="/user" component={User} />
+      </div>
+    </Router>
+  )
 
 Meteor.startup(() => {
   render(<App />, document.getElementById('react-target'));
