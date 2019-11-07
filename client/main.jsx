@@ -12,12 +12,11 @@ Bert.defaults.style = 'growl-top-right';
 
 const routing = (
   <Router>
-    <div>
+     
+        <Route exact path="/" component={App} />
+        <Route exact path="/user" component={User} />
       
-        <Route path="/" component={App} />
-        <Route path="/user" component={User} />
-      
-    </div>
+    
   </Router>
 )
 

@@ -6,6 +6,10 @@ import NavbarX from './NavbarX.jsx';
 const User = () => (
     <div>
       <NavbarX />
+      <h1>Zapatica </h1>
+      <h1>Zapatica </h1>
+      <h1>Zapatica </h1>
+      <h1>Zapatica </h1>
     </div>
   );
   
