@@ -1,15 +1,25 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row'
+import NavbarX from './NavbarX.jsx';
 
-export default class User extends React.Component {
+const User = () => (
+    <div>
+      <NavbarX />
+    </div>
+  );
+  
+  export default User;
 
-    render(){
-        <Container>
-            <Row>
-                <div>
-                    <h2>Creaciones</h2>
-                </div>
-            </Row>
-        </Container>
-    }
-}
+// export default class User extends React.Component {
+
+//     render(){
+//         <Container>
+//             <Row>
+//                 <div>
+//                     <h2>Creaciones</h2>
+//                 </div>
+//             </Row>
+//         </Container>
+//     }
+// }

@@ -17,7 +17,8 @@ export default class Login extends React.Component {
         email: '',
         password: '',
         name: '',
-        hasAgreed: false
+        hasAgreed: false,
+
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -93,10 +94,10 @@ render() {
           <div><h1 style={{ paddingBottom: '20%'}}>Iniciar Sesión</h1></div>
 
           <div className="FormField">
-            <input type="text" id="name" className="FormField__Input" placeholder="Nombre de Usuario" name="name2" value={this.state.name} onChange={this.handleChange} />
+            <input type="text" id="name" className="FormField__Input" placeholder="Nombre de Usuario" name="name2" value={this.state.name_login} onChange={this.handleChange} />
           </div>
           <div className="FormField">
-            <input type="password" id="password" className="FormField__Input" placeholder="Contraseña" name="password2" value={this.state.password} onChange={this.handleChange} />
+            <input type="password" id="password" className="FormField__Input" placeholder="Contraseña" name="password2" value={this.state.password_login} onChange={this.handleChange} />
           </div>
           <div className="FormField">
               <Button variant="dark" style={{borderRadius: '25%'}}>Iniciar Sesión</Button>
