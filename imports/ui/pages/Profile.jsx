@@ -1,17 +1,17 @@
 import React from 'react';
-import sharedStyles from './css/sharedStyles.css'
-import loginStyles from '../css/login.css';
+//import sharedStyles from '../css/sharedStyles.css'
+import '../css/login.css';
 import ReactDOM from 'react-dom'
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
-import NavbarX from './pages/NavbarX.jsx';
+import NavbarX from './NavbarX';
 
-const tableStyles = {...styles, ...sharedStyles }
+//const tableStyles = {...loginStyles, ...sharedStyles }
 
 export default class Profile extends React.Component {
     
     
     render(){
-        <NavbarX/>
+      return  <div>Mensaje de prueba</div>
 
     }
 
@@ -20,3 +20,4 @@ export default class Profile extends React.Component {
 
 // https://github.com/css-modules/css-modules
 //export default CssMudule(Profile, {tableStyles})
+//CSSModules(Profile, tableStyles)

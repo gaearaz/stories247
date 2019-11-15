@@ -24,14 +24,15 @@ export default class Login extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     
-    //  const routing = (
+     const routing = "" //(
     //    <Router>
     //      <div>
     //        <Route path="/" component={App} />
     //        <Route path="/user" component={User} />
     //      </div>
     //    </Router>
-    //  )
+    //  
+    //)
 }
 
 

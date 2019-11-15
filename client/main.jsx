@@ -6,20 +6,18 @@ import { Bert } from 'meteor/themeteorchef:bert';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import User from '/imports/ui/pages/User';
 import App from '/imports/ui/App'
-
+import Profile from '/imports/ui/pages/Profile'
 
 Bert.defaults.style = 'growl-top-right';
 
 const routing = (
   <Router>
-     
         <Route exact path="/" component={App} />
         <Route exact path="/user" component={User} />
-      
-    
+        <Route exact path="/profile" component={Profile} />     
   </Router>
 )
 
 Meteor.startup(() => {
-  render(routing, document.getElementById('react-target'));
+  render(<App />, document.getElementById('react-target'));
 });

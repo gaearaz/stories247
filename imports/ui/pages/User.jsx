@@ -2,14 +2,22 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row'
 import NavbarX from './NavbarX.jsx';
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
+
+import Componente from './Componente';
+import Componente2 from './Componente2';
+
+const routing = (
+  <Router>
+        <Route exact path="/user/c1" component={Componente} />
+        <Route exact path="/user/c2" component={Componente2} />
+  </Router>
+)
 
 const User = () => (
     <div>
-      <NavbarX />
-      <h1>Zapatica </h1>
-      <h1>Zapatica </h1>
-      <h1>Zapatica </h1>
-      <h1>Zapatica </h1>
+      Mensaje de prueba
+      { routing }
     </div>
   );
   
