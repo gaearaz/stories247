@@ -1,0 +1,19 @@
+html, body, #app, #app>div {
+    height: 100%
+  }
+
+  .fill-window {
+    /* height: 100%; */
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: red;
+
+}
+
+.banner{
+    height: 100% !important;
+    overflow:hidden; /* or overflow:auto; if you want scrollbars */
+    background-color: red;
+}
