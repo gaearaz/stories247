@@ -17,6 +17,13 @@ class MyEditor extends React.Component {
       editorState
     })
   }
+  componentWillMount(){
+    document.body.style.background= "black";
+}
+
+componentWillUnmount(){
+    document.body.style.background = null;
+}
 
   handleKeyCommand = (command) => {
     const newState = RichUtils.handleKeyCommand(this.state.editorState, command);
