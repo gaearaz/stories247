@@ -1,0 +1,43 @@
+
+h4{
+    color: black;
+}
+
+#story-title{
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#button-post{
+    margin-top: 15px;
+    margin:0 auto;
+    display:block;
+}
+
+div.DraftEditor-root{
+
+    border: 1px solid orange;
+    height: 600px;
+    width: 1100px;
+    overflow-y: auto;
+    background-color: white;
+    color:  black;
+}
+.editorContainer{
+    border: 1px solid white;
+    background:orange;  
+    height: 600px;
+    width: 200px;
+    margin: 0 auto; 
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 150px;
+    justify-content: center;
+}
+
+
+div.DraftEditor-editorContainer, div.public-DraftEditor-content {
+    height: 100%;
+}
+

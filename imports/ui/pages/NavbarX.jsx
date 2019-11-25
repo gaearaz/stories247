@@ -8,6 +8,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 import '../css/navbar.css'
 import NavItem from 'react-bootstrap/NavItem';
 import Image from 'react-bootstrap/Image';
+import { browserHistory } from 'react-router';
 
 export default class NavbarX extends React.Component {
 
@@ -17,6 +18,18 @@ export default class NavbarX extends React.Component {
     this.handleLogoutClick = this.handleLogoutClick.bind(this);
     this.state = {isLoggedIn: false};
   }
+  handleHomeClick= () => {
+    browserHistory.push('/');
+  }
+
+  handleWriteClick= () => {
+    browserHistory.push('/write');
+  }
+
+  handleSearchClick= () => {
+    browserHistory.push('/');
+  }
+
   handleLoginClick() {
     this.setState({isLoggedIn: true});
   }
@@ -42,13 +55,13 @@ export default class NavbarX extends React.Component {
     return (
       <Navbar fixed="top" className="nav-x" bg="dark" variant="dark">
         <Navbar.Brand href="#home">
-          <Button className="btn-nav" variant="warning">
+          <Button className="btn-nav" variant="warning" onClick={this.handleHomeClick}>
             24/7
           </Button>
         </Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link href="#write">
-            <Button className="btn-nav" variant="warning">
+            <Button className="btn-nav" variant="warning" onClick={this.handleWriteClick}>
               Escribir
             </Button>
           </Nav.Link>
