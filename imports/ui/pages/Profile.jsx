@@ -9,6 +9,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import Icon from '@material-ui/core/Icon';
+import FormControl from 'react-bootstrap/FormControl';
+import Form from 'react-bootstrap/Form';
+
 
 export default class Profile extends React.Component {
     
@@ -47,19 +50,29 @@ export default class Profile extends React.Component {
               <h3><Icon>settings_applications</Icon>  Editar cuenta</h3>
             </Col>
           </Row>
+
+          <Row>
+            <div className="fill-banner stripe">█████████████████████████████</div>
+          </Row>
+            <Row>
+             <div className="fill-form"><h4>Datos de usuario</h4>
+             Sexo: <br></br>
+             Nacionalidad:  <br></br>
+             Edad:  <br></br>
+             Cumpleaños: <br></br><br></br>
+             <h4>Descripción <Icon>create</Icon></h4>
+             <br></br>
+             <Form>
+                <Form.Group controlId="exampleForm.ControlTextarea1" className="modificator">
+                  <Form.Control as="textarea" rows="3" />
+                </Form.Group>
+              </Form>
+             </div>
+            </Row>
           </Container>
-        
-        // <Container>
-        //   <Row>
-            
-        //   </Row>
-        // </Container>
         );
-
     }
-
 }
-
 
 // https://github.com/css-modules/css-modules
 //export default CssMudule(Profile, {tableStyles})
