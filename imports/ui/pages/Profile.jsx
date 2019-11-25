@@ -49,11 +49,11 @@ export default class Profile extends React.Component {
           </Row>
           </Container>
         
-        <Container>
-          <Row>
+        // <Container>
+        //   <Row>
             
-          </Row>
-        </Container>
+        //   </Row>
+        // </Container>
         );
 
     }
