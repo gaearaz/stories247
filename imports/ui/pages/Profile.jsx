@@ -17,7 +17,14 @@ import Button from 'react-bootstrap/Button';
 
 export default class Profile extends React.Component {
     
+  componentWillMount(){
+    document.body.style.background= "white";
+  }
   
+  componentWillUnmount(){
+    document.body.style.background = null;
+  }
+
     
     render(){
       return  (
