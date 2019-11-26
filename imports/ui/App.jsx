@@ -23,6 +23,7 @@ const routing = (
 )
 
  const App = () => (
+   
    <div>
      <NavbarX/>
       { routing }

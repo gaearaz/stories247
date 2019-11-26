@@ -1,6 +1,6 @@
 .imgPreview{
     text-align: center;
-    height: 465px;
+    height: 575px;
     width: 400px;
     border-left: 1px solid gray;
     border-right: 1px solid gray;
@@ -12,7 +12,71 @@
     height: 100%;
 }
 .story-details{
-    height: 500px;
+    height: 600px;
     width: 900px;
     background: orange;
+}
+
+.banner-details-title{
+    background: black;
+    height: 40px;
+    justify-content: center;
+}
+
+.details-title{
+    margin-left: 10px;
+    margin-right: 10px;
+    color: black;
+    justify-content: center;
+}
+.banner-details-title.details-title h2{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.control-details-title{
+    border: 1px solid black;
+}
+
+.details-description{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    color: black;
+}
+
+.control-details-description{
+    border: 1px solid black;
+    height: 75px;
+}
+
+.details-genre{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    color: black;
+}
+
+.details-language{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    color: black;
+}
+
+.details-clasification{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    color: black;
+}
+
+.details-button-next{
+    float: right;
+    margin-top: 10px;
 }

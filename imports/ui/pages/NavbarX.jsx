@@ -52,7 +52,7 @@ export default class NavbarX extends React.Component {
           
         </Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link href="/write">
+          <Nav.Link href="/details">
             <Button className="btn-nav" variant="warning">
               Escribir
             </Button>
