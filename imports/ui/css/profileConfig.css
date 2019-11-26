@@ -1,0 +1,80 @@
+
+    body
+    {
+      background: white;
+      font-family: 'Trocchi', serif;
+      color: white;
+    }
+
+.fill-window {
+     height: 36%; 
+    position: absolute;
+    top: 7.5%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    /* overflow: hidden; */
+  }
+
+  .fill-banner {
+    height: 6%; 
+   position: absolute;
+   top: 96.5%;
+   left: 0;
+   width: 100%;
+   
+   /* overflow: hidden; */
+ }
+
+ .fill-form {
+  height: 6%; 
+ position: relative;
+ text-align: left;
+ padding-top: 5%;
+ top: 112.5%;
+ left: 23%;
+ width: 100%;
+ color: black;
+ /* overflow: hidden; */
+}
+
+.modificator{
+  width:53%;
+}
+
+.banner{
+  background-color: black;
+}
+.stripe{
+  background: rgb(227,160,4);
+  color: black;
+  /* background: linear-gradient(180deg, rgba(227,160,4,1) 0%, rgba(235,121,0,1) 0%, rgba(244,200,4,1) 100%); */
+}
+.left{
+  text-align: left;
+  padding-left: 70%;}
+
+.left-custom{
+  padding-left: 20.5%;}
+
+.right{
+  text-align: right;
+  padding-right: 70%;}
+
+.center{
+  text-align: center;}
+
+.top{
+  padding-top: 4%;}
+
+.bottom{
+  padding-top: 7%;}
+
+.image{
+  position: relative;
+  padding-top: -10%;
+  width: 55 px;
+  height: 55 px;}
+
+h3{
+  font-size: 17px;}
