@@ -7,6 +7,7 @@ import User from '/imports/ui/pages/User';
 import Profile from '/imports/ui/pages/Profile'
 import MyEditor from '/imports/ui/pages/MyEditor'
 import ProfileConfig from '/imports/ui/pages/ProfileConfig'
+import Details from '/imports/ui/pages/Details'
 
 
 const routing = (
@@ -15,7 +16,8 @@ const routing = (
         <Route path="/user" component={User} />
         <Route exact path="/profile" component={Profile} />
         <Route exact path="/write" component={MyEditor} />   
-        <Route exact path="/profileConfig" component={ProfileConfig} />        
+        <Route exact path="/profileConfig" component={ProfileConfig} />
+        <Route exact path="/details" component={Details}/>        
      
   </Router>
 )
