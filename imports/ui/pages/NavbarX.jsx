@@ -79,6 +79,9 @@ export default class NavbarX extends React.Component {
         </Button>
         </Form>
         <Nav className="ml-auto">
+        <Button className="btn-nav-profile" variant="warning" href="/profile">
+            <b> Mi Perfil</b>
+        </Button>
         {button}
 
           
