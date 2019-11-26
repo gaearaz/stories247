@@ -8,64 +8,80 @@ import Image from 'react-bootstrap/Image';
 import Icon from '@material-ui/core/Icon';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import DropdownButton from 'react-bootstrap/DropdownButton'
+import Dropdown from 'react-bootstrap/Dropdown'
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
+import SplitButton from 'react-bootstrap/SplitButton'
+
 
 export default class ProfileConfig extends React.Component {
     
+    constructor() {
+        super();
+        this.state = {
+            title: "Selección"
+        };
+        
+        
+    }
+
+    changeValueGenre(text) {
+        this.setState({title: text})
+    }
     
+    componentWillMount(){
+        document.body.style.background= "white";
+    }
+    
+    componentWillUnmount(){
+        document.body.style.background = null;
+    }
+
     render(){
       return  (
-        <Container fluid>
+        <Container className="h2mod h2modsize">
           <Row>
           <Button className="btn-nav cancel-button" variant="warning">Cancelar</Button>
           <div className="fill-banner stripe"><h2 style={{ paddingTop: '0.5%'}}>Configuración de cuenta y privacidad</h2></div>
           </Row>
-          {/* <Row>
-           <Col md={4}>
-             <h3 className="left top">Creaciones</h3>
-          </Col>
-           <Col md={{ span: 4, offset: 4 }}>
-             <h3 className="right top">Guardados</h3></Col>
-          </Row>
 
-          <Row>
-            <Col>
-              <Image src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22171%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20171%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16e9f9917f4%20text%20%7B%20fill%3A%23999%3Bfont-weight%3Anormal%3Bfont-family%3A-apple-system%2CBlinkMacSystemFont%2C%26quot%3BSegoe%20UI%26quot%3B%2CRoboto%2C%26quot%3BHelvetica%20Neue%26quot%3B%2CArial%2C%26quot%3BNoto%20Sans%26quot%3B%2Csans-serif%2C%26quot%3BApple%20Color%20Emoji%26quot%3B%2C%26quot%3BSegoe%20UI%20Emoji%26quot%3B%2C%26quot%3BSegoe%20UI%20Symbol%26quot%3B%2C%26quot%3BNoto%20Color%20Emoji%26quot%3B%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16e9f9917f4%22%3E%3Crect%20width%3D%22171%22%20height%3D%22180%22%20fill%3D%22%23373940%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2258.70000076293945%22%20y%3D%2294.68999996185303%22%3E171x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" roundedCircle className="image"/>
+        <Row className="justify-content-md-center h2modsize">
+
+            <Col> Nombre:</Col>
+            <Col><Form.Control type="password" placeholder="Digita tu nombre" /></Col>
+            </Row>
+
+            <Row className="justify-content-md-center h2modsize">
+
+            <Col> Fecha de nacimiento: </Col>
+            <Col><Form.Control type="email" placeholder="Escribe tu fecha de nacimiento" /></Col>
+            </Row>
+
+            <Row className="justify-content-md-center h2modsize">
+
+            <Col> Género: </Col>
+            <Col>{[DropdownButton].map((DropdownType, idx) => (
+                <DropdownType
+                    size="sm"
+                    variant="secondary"
+                    title= {this.state.title}
+                    id={`dropdown-button-drop-${idx}`}
+                    key={idx}
+                >
+                 <Dropdown.Item  onClick={(e) => this.changeValueGenre(e.target.textContent)} >Masculino</Dropdown.Item>
+                <Dropdown.Item  onClick={(e) => this.changeValueGenre(e.target.textContent)} >Femenino</Dropdown.Item>
+                 </DropdownType>
+                ))}
             </Col>
-          </Row>
+            </Row>
 
-          <Row>
-            <Col>
-            <h2>Stevens</h2>
-            </Col>
-          </Row>
+            <Row className="justify-content-md-center h2modsize">
 
-          <Row>
-            <Col>
-            <h7 style={{fontStyle: "thin"}}>@Hinoir1</h7>
-            </Col>
-          </Row>
+            <Col> Ubicación: </Col>
+            <Col><Form.Control type="email" placeholder="Escribe tu fecha de nacimiento" /></Col>
+            </Row>
 
-          <Row>
-            <Col md={4} className="left-custom">
-              <h3><Icon>settings_applications</Icon>  Editar cuenta</h3>
-            </Col>
-          </Row>
 
-            <Row>
-             <div className="fill-form"><h4>Datos de usuario</h4>
-             Sexo: <br></br>
-             Nacionalidad:  <br></br>
-             Edad:  <br></br>
-             Cumpleaños: <br></br><br></br>
-             <h4>Descripción <Icon>create</Icon></h4>
-             <br></br>
-             <Form>
-                <Form.Group controlId="exampleForm.ControlTextarea1" className="modificator">
-                  <Form.Control as="textarea" rows="3" />
-                </Form.Group>
-              </Form>
-             </div>
-            </Row> */}
           </Container>
         );
     }

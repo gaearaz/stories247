@@ -1,6 +1,7 @@
 
     body
     {
+      /* background: whitesmoke; */
       font-family: 'Trocchi', serif;
       color: white;
     }
@@ -15,16 +16,20 @@
     /* overflow: hidden; */
   }
 
-  .fill-banner {
+  /* .fill-banner {
     height: 6%; 
-    position: absolute;
-    top: 96.5%;
+    width: 15%;
+    position: relative;
+    top: 25%;
     left: 0;
-    width: 100%;
-    
-    /* overflow: hidden; */
-  }
+    overflow: hidden;
+  } */
   
+  .stripe{
+    background: rgb(227,160,4);
+    color: black;
+  /* background: linear-gradient(180deg, rgba(227,160,4,1) 0%, rgba(235,121,0,1) 0%, rgba(244,200,4,1) 100%); */
+}
   .fill-form {
     height: 6%; 
     position: relative;
@@ -44,11 +49,6 @@
   .banner{
     background-color: black;
   }
-  .stripe{
-    background: rgb(227,160,4);
-    color: black;
-  /* background: linear-gradient(180deg, rgba(227,160,4,1) 0%, rgba(235,121,0,1) 0%, rgba(244,200,4,1) 100%); */
-}
 .left{
   text-align: left;
   padding-left: 70%;}

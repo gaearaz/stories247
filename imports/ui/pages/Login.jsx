@@ -24,6 +24,8 @@ export default class Login extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     
+
+
      const routing = "" //(
     //    <Router>
     //      <div>
@@ -35,7 +37,13 @@ export default class Login extends React.Component {
     //)
 }
 
+componentWillMount(){
+  document.body.style.background= "black";
+}
 
+componentWillUnmount(){
+  document.body.style.background = null;
+}
 
 handleChange(e) {
     let target = e.target;

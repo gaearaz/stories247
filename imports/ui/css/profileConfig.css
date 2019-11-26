@@ -77,3 +77,17 @@ body
   height: 55 px;}
 
 
+.h2mod
+{
+    color: black;
+    align-content: flex-start;
+    display: inline-block;
+    vertical-align:top;
+    height: 30%;
+}
+
+.h2modsize{
+    font-size: 18 px;
+}
+
+
