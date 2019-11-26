@@ -13,7 +13,9 @@ export default class Details extends React.Component {
         super();
         this.state = {
             file: '',
-            imagePreviewUrl: ''
+            imagePreviewUrl: '',
+            dropdownGenreValue: "Géneros",
+            dropdownLanguageValue: "Idiomas"
         };
         this._handleImageChange = this._handleImageChange.bind(this);
         this._handleSubmit = this._handleSubmit.bind(this);
@@ -40,6 +42,14 @@ export default class Details extends React.Component {
         }
 
         reader.readAsDataURL(file)
+    }
+
+    changeValueGenre(text) {
+        this.setState({dropdownGenreValue: text})
+    }
+
+    changeValueLanguage(text) {
+        this.setState({dropdownLanguageValue: text})
     }
 
     render() {
@@ -78,23 +88,23 @@ export default class Details extends React.Component {
                             </div>
                             <div className="details-genre">
                                 <Form.Label className="label-details-genre">Género</Form.Label>
-                                <DropdownButton id="dropdown-variants-secondary-genre" variant="secondary" title="Géneros">
-                                    <Dropdown.Item href="#/action-1">Acción</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-2">Fantasía</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3">Romance</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3">Ficción historica</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3">Horror</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3">Comedia</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3">Poesía</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3">Otros</Dropdown.Item>
+                                <DropdownButton id="dropdown-variants-secondary-genre" variant="secondary" title={this.state.dropdownGenreValue}>
+                                    <Dropdown.Item onClick={(e) => this.changeValueGenre(e.target.textContent)}>Acción</Dropdown.Item>
+                                    <Dropdown.Item onClick={(e) => this.changeValueGenre(e.target.textContent)}>Fantasía</Dropdown.Item>
+                                    <Dropdown.Item onClick={(e) => this.changeValueGenre(e.target.textContent)}>Romance</Dropdown.Item>
+                                    <Dropdown.Item onClick={(e) => this.changeValueGenre(e.target.textContent)}>Ficción historica</Dropdown.Item>
+                                    <Dropdown.Item onClick={(e) => this.changeValueGenre(e.target.textContent)}>Horror</Dropdown.Item>
+                                    <Dropdown.Item onClick={(e) => this.changeValueGenre(e.target.textContent)}>Comedia</Dropdown.Item>
+                                    <Dropdown.Item onClick={(e) => this.changeValueGenre(e.target.textContent)}>Poesía</Dropdown.Item>
+                                    <Dropdown.Item onClick={(e) => this.changeValueGenre(e.target.textContent)}>Otros</Dropdown.Item>
                                 </DropdownButton>
                             </div>
                             <div className="details-language">
                                 <Form.Label className="label-details-language">Idioma</Form.Label>
-                                <DropdownButton id="dropdown-variants-secondary-languages" variant="secondary" title="Idiomas">
-                                    <Dropdown.Item href="#/action-1">Español</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-2">Inglés</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3">Francés</Dropdown.Item>
+                                <DropdownButton id="dropdown-variants-secondary-languages" variant="secondary" title={this.state.dropdownLanguageValue}>
+                                    <Dropdown.Item onClick={(e) => this.changeValueLanguage(e.target.textContent)}>Español</Dropdown.Item>
+                                    <Dropdown.Item onClick={(e) => this.changeValueLanguage(e.target.textContent)}>Inglés</Dropdown.Item>
+                                    <Dropdown.Item onClick={(e) => this.changeValueLanguage(e.target.textContent)}>Francés</Dropdown.Item>
                                 </DropdownButton>
 
                             </div>
