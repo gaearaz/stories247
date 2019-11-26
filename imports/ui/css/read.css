@@ -1,0 +1,30 @@
+.read-header{
+    height: 20px;
+    width: 1000px;
+    justify-content: start;
+}
+
+.read-author-image{
+    height: 125px;
+    width: 100px;
+    justify-content: left;
+}
+
+.read-header h2{
+    color: black;
+}
+
+.read-star{
+    height: 100px;
+}
+
+.read-text{
+    
+    margin-top: 150px;
+    height: 500px;
+}
+
+.read-form-text{
+    background: whitesmoke !important;
+    height: 900px !important;
+}
