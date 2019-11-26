@@ -74,7 +74,7 @@ export default class NavbarX extends React.Component {
         </Nav>
         <Form className="form-nav">
           <FormControl type="text" placeholder="Buscar libros..."  />
-          <Button href="/search" className="btn-search" variant="outline-warning">
+          <Button href="/read" className="btn-search" variant="outline-warning">
             Buscar
         </Button>
         </Form>
