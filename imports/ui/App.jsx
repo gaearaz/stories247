@@ -9,6 +9,7 @@ import MyEditor from '/imports/ui/pages/MyEditor'
 import ProfileConfig from '/imports/ui/pages/ProfileConfig'
 import Details from '/imports/ui/pages/Details'
 import Read from '/imports/ui/pages/Read'
+import ProfileBiblio from '/imports/ui/pages/ProfileBiblio'
 
 
 const routing = (
@@ -20,7 +21,8 @@ const routing = (
         <Route exact path="/profileConfig" component={ProfileConfig} />
         <Route exact path="/details" component={Details}/>
         <Route exact path="/read" component={Read}/>                
-     
+        <Route exact path="/profileBiblio" component={ProfileBiblio}/>                
+
   </Router>
 )
 
