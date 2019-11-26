@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import Icon from '@material-ui/core/Icon';
 import Form from 'react-bootstrap/Form';
-
+import Button from 'react-bootstrap/Button';
 
 export default class ProfileConfig extends React.Component {
     
@@ -16,7 +16,8 @@ export default class ProfileConfig extends React.Component {
       return  (
         <Container fluid>
           <Row>
-            <div className="fill-banner stripe">█████████████████████████████</div>
+          <Button className="btn-nav cancel-button" variant="warning">Cancelar</Button>
+          <div className="fill-banner stripe"><h2 style={{ paddingTop: '0.5%'}}>Configuración de cuenta y privacidad</h2></div>
           </Row>
           {/* <Row>
            <Col md={4}>
