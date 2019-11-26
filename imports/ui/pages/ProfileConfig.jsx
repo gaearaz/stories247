@@ -133,6 +133,7 @@ export default class ProfileConfig extends React.Component {
             <div className="profilePhotoPreview">
                             {$profilePhotoPreview}
                         </div>
+            <Button id="button-modifyxD" variant="outline-dark" ><em>  Guardar  </em></Button>
           </Container>
         );
     }

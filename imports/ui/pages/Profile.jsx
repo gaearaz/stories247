@@ -74,7 +74,7 @@ export default class Profile extends React.Component {
           </Row>
 
             <Row>
-             <div className="fill-form"><h4>Datos de usuario</h4>
+             <div className="fill-form2"><h4>Datos de usuario</h4>
              Sexo: <br></br>
              Nacionalidad:  <br></br>
              Edad:  <br></br>
