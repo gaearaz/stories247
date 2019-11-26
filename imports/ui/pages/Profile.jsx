@@ -88,6 +88,7 @@ export default class Profile extends React.Component {
               </Form>
              </div>
             </Row>
+            <Button id="button-modify-profile" variant="outline-dark" ><em>  Modificar  </em></Button>
           </Container>
         );
     }
